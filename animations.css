@@ -1,1 +1,185 @@
+/* ===========================================
+   OXENTE BRIGADEIRO
+   animations.css
+===========================================*/
 
+/* Pisca suave do letreiro */
+
+@keyframes neonFlicker{
+
+0%,18%,22%,24%,55%,57%,100%{
+
+opacity:1;
+
+}
+
+20%{
+
+opacity:.55;
+
+}
+
+23%{
+
+opacity:.25;
+
+}
+
+56%{
+
+opacity:.40;
+
+}
+
+}
+
+/* Respiração do Neon Rosa */
+
+@keyframes glowPink{
+
+0%{
+
+box-shadow:
+0 0 8px rgba(255,47,175,.25),
+0 0 18px rgba(255,47,175,.18);
+
+}
+
+100%{
+
+box-shadow:
+0 0 18px rgba(255,47,175,.45),
+0 0 40px rgba(255,47,175,.28);
+
+}
+
+}
+
+/* Respiração do Neon Azul */
+
+@keyframes glowBlue{
+
+0%{
+
+box-shadow:
+0 0 8px rgba(37,216,255,.25),
+0 0 18px rgba(37,216,255,.18);
+
+}
+
+100%{
+
+box-shadow:
+0 0 18px rgba(37,216,255,.45),
+0 0 40px rgba(37,216,255,.28);
+
+}
+
+}
+
+/* Botão pulsando */
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.03);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* Flutuação */
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Entrada dos Cards */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(45px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Aplicações */
+
+.titulo-neon{
+
+animation:neonFlicker 7s infinite;
+
+}
+
+.card.rosa{
+
+animation:
+fadeUp .8s ease,
+glowPink 3.5s infinite alternate;
+
+}
+
+.card.azul{
+
+animation:
+fadeUp .8s ease,
+glowBlue 3.5s infinite alternate;
+
+}
+
+.btn-rosa:hover,
+.btn-azul:hover{
+
+animation:pulse .8s infinite;
+
+}
+
+.icone{
+
+animation:floating 4s ease-in-out infinite;
+
+}
