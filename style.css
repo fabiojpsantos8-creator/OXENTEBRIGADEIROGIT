@@ -1,1 +1,239 @@
 CSS
+/* =======================================================
+   OXENTE BRIGADEIRO
+   STYLE.CSS - PARTE 1
+======================================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =======================================================
+   VARIÁVEIS
+======================================================= */
+
+:root{
+
+    --bg:#16110F;
+    --bg-card:#231A16;
+
+    --cream:#FFF7EF;
+
+    --pink:#FF2FAF;
+
+    --blue:#25D8FF;
+
+    --gold:#FFD45A;
+
+    --chocolate:#5D3525;
+
+    --shadow:0 12px 35px rgba(0,0,0,.35);
+
+    --radius:26px;
+
+    --transition:.35s ease;
+
+}
+
+/* =======================================================
+   RESET
+======================================================= */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:var(--bg);
+
+font-family:'Poppins',sans-serif;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* =======================================================
+   TÍTULOS
+======================================================= */
+
+h1,h2,h3,h4{
+
+font-family:'Playfair Display',serif;
+
+font-weight:700;
+
+}
+
+p{
+
+line-height:1.7;
+
+color:#d6d6d6;
+
+}
+
+/* =======================================================
+   LINKS
+======================================================= */
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+/* =======================================================
+   IMAGENS
+======================================================= */
+
+img{
+
+width:100%;
+
+display:block;
+
+border-radius:18px;
+
+transition:var(--transition);
+
+}
+
+/* =======================================================
+   CONTAINER
+======================================================= */
+
+.container{
+
+width:min(1200px,92%);
+
+margin:auto;
+
+}
+
+/* =======================================================
+   SECTION
+======================================================= */
+
+section{
+
+padding:90px 0;
+
+}
+
+/* =======================================================
+   TÍTULO DA SEÇÃO
+======================================================= */
+
+.titulo-box{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:25px;
+
+margin-bottom:70px;
+
+}
+
+.titulo-central{
+
+text-align:center;
+
+}
+
+.icone{
+
+font-size:48px;
+
+margin-bottom:15px;
+
+filter:drop-shadow(0 0 12px var(--pink));
+
+}
+
+.titulo-neon{
+
+font-size:48px;
+
+letter-spacing:2px;
+
+}
+
+.rosa{
+
+color:var(--pink);
+
+}
+
+.azul{
+
+color:var(--blue);
+
+}
+
+.titulo-central p{
+
+margin-top:12px;
+
+font-size:15px;
+
+letter-spacing:4px;
+
+color:#cfcfcf;
+
+}
+
+.linha{
+
+height:2px;
+
+width:180px;
+
+border-radius:50px;
+
+}
+
+.linha.rosa{
+
+background:var(--pink);
+
+}
+
+.linha.azul{
+
+background:var(--blue);
+
+}
+
+/* =======================================================
+   GRID DOS CARDS
+======================================================= */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+}
