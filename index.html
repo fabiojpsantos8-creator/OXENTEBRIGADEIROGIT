@@ -1,226 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Oxente Brigadeiro</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <title>Oxente Brigadeiro - Nossos Destaques</title>
+    
+    <!-- Importação das Fontes Premium Corrigida (Orbitron, Space Grotesk) -->
+    <link rel="stylesheet" href="https://googleapis.com">
+    
+    <!-- Vínculo com o seu arquivo CSS separado -->
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="animations.css">
-
 </head>
-
 <body>
 
-<!-- ================================================= -->
-<!--                 SEÇÃO DESTAQUES                    -->
-<!-- ================================================= -->
-
-<section class="destaques">
-
-<div class="container">
-
-<div class="titulo-box">
-
-<div class="linha azul"></div>
-
-<div class="titulo-central">
-
-<div class="icone">🧁</div>
-
-<h2 class="titulo-neon">
-
-<span class="rosa">NOSSOS</span>
-
-<span class="azul">DESTAQUES</span>
-
-</h2>
-
-<p>
-
-DOCES GOURMET FEITOS PARA VOCÊ
-
-</p>
-
-</div>
-
-<div class="linha rosa"></div>
-
-</div>
-
-<!-- ===================== -->
-
-<div class="cards">
-
-<!-- CARD 01 -->
-
-<div class="card rosa">
-
-<img src="img/brigadeiro.jpg" alt="Brigadeiro Gourmet">
-
-<div class="conteudo">
-
-<h3>Brigadeiro Gourmet</h3>
-
-<p>
-
-Tradicional,
-
-Ninho,
-
-Nutella,
-
-Pistache e mais sabores.
-
-</p>
-
-<div class="preco">
-
-<strong>R$ 3,50</strong>
-
-<span>cada</span>
-
-</div>
-
-<button class="btn-rosa">
-
-🛒 PEDIR AGORA
-
-</button>
-
-</div>
-
-</div>
-
-<!-- CARD 02 -->
-
-<div class="card azul">
-
-<img src="img/bolo-chocolate.jpg" alt="Bolo Chocolate">
-
-<div class="conteudo">
-
-<h3>Bolo de Chocolate</h3>
-
-<p>
-
-Massa fofinha,
-
-recheio cremoso
-
-e cobertura irresistível.
-
-</p>
-
-<div class="preco">
-
-<strong>R$ 89,90</strong>
-
-<span>1kg</span>
-
-</div>
-
-<button class="btn-azul">
-
-🛒 PEDIR AGORA
-
-</button>
-
-</div>
-
-</div>
-
-<!-- CARD 03 -->
-
-<div class="card rosa">
-
-<img src="img/bolo-morango.jpg" alt="Morango">
-
-<div class="conteudo">
-
-<h3>Bolo de Morango</h3>
-
-<p>
-
-Recheio de morango fresco
-
-com creme especial.
-
-</p>
-
-<div class="preco">
-
-<strong>R$ 99,90</strong>
-
-<span>1kg</span>
-
-</div>
-
-<button class="btn-rosa">
-
-🛒 PEDIR AGORA
-
-</button>
-
-</div>
-
-</div>
-
-<!-- CARD 04 -->
-
-<div class="card azul">
-
-<img src="img/torta.jpg" alt="Torta">
-
-<div class="conteudo">
-
-<h3>Torta Gourmet</h3>
-
-<p>
-
-Diversos sabores
-
-para adoçar seu dia.
-
-</p>
-
-<div class="preco">
-
-<strong>R$ 79,90</strong>
-
-<span>1kg</span>
-
-</div>
-
-<button class="btn-azul">
-
-🛒 PEDIR AGORA
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<script src="script.js"></script>
+    <section class="highlights-section">
+        <!-- Cabeçalho da Seção -->
+        <header class="section-header">
+            
+            <!-- 🍰 ÍCONE DA IMAGEM: Fatias de Bolo/Torta Neon em SVG Nativo Fino Corrigido -->
+            <div class="header-icon-wrapper">
+                <svg xmlns="http://w3.org" viewBox="0 0 100 100" class="neon-cake-image-icon">
+                    <!-- Camada Azul Claro Neon -->
+                    <g class="neon-blue-glow">
+                        <path d="M12 60 L85 42 C85 42 65 30 48 31 C40 31.5 30 36 12 60 Z" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13 60 L85 64" stroke-linecap="round"/>
+                        <circle cx="48" cy="34" r="9"/>
+                        <path d="M48 25 C50 20 54 21 52 21" stroke-linecap="round"/>
+                    </g>
+                    <!-- Camada Rosa Pink Neon -->
+                    <g class="neon-pink-glow">
+                        <path d="M13 72 C20 62 25 72 35 62 C45 72 55 62 65 72 C75 62 80 68 87 60" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13 63 L13 87 L87 73 L87 45" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="48" cy="34" r="4.5" fill="currentColor"/>
+                        <path d="M38 41 C42 43 45 44 48 44 C51 44 55 43 58 41" stroke-linecap="round"/>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="title-row">
+                <span class="neon-line line-left"></span>
+                <h2 class="section-title">
+                    <span class="text-pink">NOSSOS</span> <span class="text-blue">DESTAQUES</span>
+                </h2>
+                <span class="neon-line line-right"></span>
+            </div>
+            <p class="section-subtitle">DOCES GOURMET FEITOS PARA VOCÊ ♡</p>
+        </header>
+
+        <!-- Grid que organiza os 4 Cards -->
+        <div class="cards-grid">
+            
+            <!-- Card 1 -->
+            <article class="product-card border-pink">
+                <div class="card-image-wrapper">
+                    <img src="https://unsplash.com" alt="Brigadeiro Gourmet" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Brigadeiro Gourmet</h3>
+                    <p class="card-description">Tradicional, Ninho, Nutella, Pistache e mais sabores.</p>
+                    <div class="card-footer">
+                        <div class="card-price">R$ 3,50 <span class="price-unit">cada</span></div>
+                        <a href="https://wa.me." target="_blank" class="btn btn-pink">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="btn-icon">
+                                <circle cx="8" cy="21" r="1"/>
+                                <circle cx="19" cy="21" r="1"/>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                            </svg>
+                            <span>PEDIR AGORA</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 (Imagem Atualizada com Link Direto do Servidor Confiável) -->
+            <article class="product-card border-blue">
+                <div class="card-image-wrapper">
+                    <img src="https://imgur.com" alt="Bolo de Chocolate" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Bolo de Chocolate</h3>
+                    <p class="card-description">Massa fofinha, recheio cremoso e cobertura irresistível.</p>
+                    <div class="card-footer">
+                        <div class="card-price">R$ 89,90 <span class="price-unit">1kg</span></div>
+                        <a href="https://wa.me." target="_blank" class="btn btn-blue">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="btn-icon">
+                                <circle cx="8" cy="21" r="1"/>
+                                <circle cx="19" cy="21" r="1"/>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                            </svg>
+                            <span>PEDIR AGORA</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="product-card border-pink">
+                <div class="card-image-wrapper">
+                    <img src="https://unsplash.com" alt="Bolo de Morango" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Bolo de Morango</h3>
+                    <p class="card-description">Recheio de morango fresco com creme especial.</p>
+                    <div class="card-footer">
+                        <div class="card-price">R$ 99,90 <span class="price-unit">1kg</span></div>
+                        <a href="https://wa.me." target="_blank" class="btn btn-pink">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="btn-icon">
+                                <circle cx="8" cy="21" r="1"/>
+                                <circle cx="19" cy="21" r="1"/>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                            </svg>
+                            <span>PEDIR AGORA</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="product-card border-blue">
+                <div class="card-image-wrapper">
+                    <img src="https://unsplash.com" alt="Torta Gourmet" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Torta Gourmet</h3>
+                    <p class="card-description">Diversos sabores para adoçar seu dia.</p>
+                    <div class="card-footer">
+                        <div class="card-price">R$ 79,90 <span class="price-unit">1kg</span></div>
+                        <a href="https://wa.me." target="_blank" class="btn btn-blue">
+                            <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="btn-icon">
+                                <circle cx="8" cy="21" r="1"/>
+                                <circle cx="19" cy="21" r="1"/>
+                                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+                            </svg>
+                            <span>PEDIR AGORA</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
 
 </body>
-
 </html>
