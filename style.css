@@ -1,804 +1,323 @@
-CSS
-/* =======================================================
-   OXENTE BRIGADEIRO
-   STYLE.CSS - PARTE 1
-======================================================= */
-
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* =======================================================
-   VARIÁVEIS
-======================================================= */
-
-:root{
-
-    --bg:#16110F;
-    --bg-card:#231A16;
-
-    --cream:#FFF7EF;
-
-    --pink:#FF2FAF;
-
-    --blue:#25D8FF;
-
-    --gold:#FFD45A;
-
-    --chocolate:#5D3525;
-
-    --shadow:0 12px 35px rgba(0,0,0,.35);
-
-    --radius:26px;
-
-    --transition:.35s ease;
-
-}
-
-/* =======================================================
-   RESET
-======================================================= */
-
-*{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-}
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-body{
-
-background:var(--bg);
-
-font-family:'Poppins',sans-serif;
-
-color:white;
-
-overflow-x:hidden;
-
-}
-
-/* =======================================================
-   TÍTULOS
-======================================================= */
-
-h1,h2,h3,h4{
-
-font-family:'Playfair Display',serif;
-
-font-weight:700;
-
-}
-
-p{
-
-line-height:1.7;
-
-color:#d6d6d6;
-
-}
-
-/* =======================================================
-   LINKS
-======================================================= */
-
-a{
-
-text-decoration:none;
-
-color:inherit;
-
-}
-
-/* =======================================================
-   IMAGENS
-======================================================= */
-
-img{
-
-width:100%;
-
-display:block;
-
-border-radius:18px;
-
-transition:var(--transition);
-
-}
-
-/* =======================================================
-   CONTAINER
-======================================================= */
-
-.container{
-
-width:min(1200px,92%);
-
-margin:auto;
-
-}
-
-/* =======================================================
-   SECTION
-======================================================= */
-
-section{
-
-padding:90px 0;
-
-}
-
-/* =======================================================
-   TÍTULO DA SEÇÃO
-======================================================= */
-
-.titulo-box{
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-gap:25px;
-
-margin-bottom:70px;
-
-}
-
-.titulo-central{
-
-text-align:center;
-
-}
-
-.icone{
-
-font-size:48px;
-
-margin-bottom:15px;
-
-filter:drop-shadow(0 0 12px var(--pink));
-
-}
-
-.titulo-neon{
-
-font-size:48px;
-
-letter-spacing:2px;
-
-}
-
-.rosa{
-
-color:var(--pink);
-
-}
-
-.azul{
-
-color:var(--blue);
-
-}
-
-.titulo-central p{
-
-margin-top:12px;
-
-font-size:15px;
-
-letter-spacing:4px;
-
-color:#cfcfcf;
-
-}
-
-.linha{
-
-height:2px;
-
-width:180px;
-
-border-radius:50px;
-
-}
-
-.linha.rosa{
-
-background:var(--pink);
-
-}
-
-.linha.azul{
-
-background:var(--blue);
-
-}
-
-/* =======================================================
-   GRID DOS CARDS
-======================================================= */
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:35px;
-
-}
-/* =======================================================
-   CARDS GOURMET
-======================================================= */
-
-.card{
-
-position:relative;
-
-overflow:hidden;
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(18px);
-
--webkit-backdrop-filter:blur(18px);
-
-border-radius:28px;
-
-padding:18px;
-
-box-shadow:0 15px 45px rgba(0,0,0,.35);
-
-transition:.45s ease;
-
-}
-
-.card.rosa{
-
-border:1.5px solid rgba(255,47,175,.85);
-
-box-shadow:
-0 0 8px rgba(255,47,175,.35),
-0 0 18px rgba(255,47,175,.18);
-
-}
-
-.card.azul{
-
-border:1.5px solid rgba(37,216,255,.85);
-
-box-shadow:
-0 0 8px rgba(37,216,255,.35),
-0 0 18px rgba(37,216,255,.18);
-
-}
-
-/* Reflexo de vidro */
-
-.card::before{
-
-content:"";
-
-position:absolute;
-
-top:-120%;
-
-left:-60%;
-
-width:65%;
-
-height:320%;
-
-background:linear-gradient(
-
-90deg,
-
-transparent,
-
-rgba(255,255,255,.18),
-
-transparent
-
-);
-
-transform:rotate(25deg);
-
-transition:.8s;
-
-}
-
-.card:hover::before{
-
-left:160%;
-
-}
-
-/* Hover */
-
-.card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.card img{
-
-height:250px;
-
-object-fit:cover;
-
-border-radius:20px;
-
-transition:.45s;
-
-}
-
-.card:hover img{
-
-transform:scale(1.06);
-
-}
-
-/* Conteúdo */
-
-.conteudo{
-
-padding:18px 8px 8px;
-
-}
-
-.conteudo h3{
-
-font-size:24px;
-
-margin-bottom:10px;
-
-color:#FFF;
-
-}
-
-.conteudo p{
-
-font-size:14px;
-
-color:#d7d7d7;
-
-margin-bottom:18px;
-
-min-height:58px;
-
-}
-
-/* Preço */
-
-.preco{
-
-display:flex;
-
-align-items:end;
-
-gap:8px;
-
-margin-bottom:22px;
-
-}
-
-.preco strong{
-
-font-size:34px;
-
-font-weight:700;
-
-color:#FFD45A;
-
-}
-
-.preco span{
-
-font-size:14px;
-
-color:#CCC;
-
-padding-bottom:7px;
-
-}
-/* =======================================================
-   BOTÕES NEON PREMIUM
-======================================================= */
-
-button{
-
-border:none;
-
-outline:none;
-
-cursor:pointer;
-
-font-family:'Poppins',sans-serif;
-
-font-weight:600;
-
-transition:.35s ease;
-
-}
-
-.btn-rosa,
-.btn-azul{
-
-width:100%;
-
-padding:16px;
-
-border-radius:18px;
-
-font-size:15px;
-
-letter-spacing:.8px;
-
-position:relative;
-
-overflow:hidden;
-
-color:#FFF;
-
-}
-
-/* =======================
-   BOTÃO ROSA
-======================= */
-
-.btn-rosa{
-
-background:linear-gradient(
-135deg,
-#FF2FAF,
-#D61C8B
-);
-
-box-shadow:
-0 0 8px rgba(255,47,175,.35),
-0 0 20px rgba(255,47,175,.18);
-
-}
-
-.btn-rosa:hover{
-
-transform:translateY(-4px);
-
-box-shadow:
-0 0 15px rgba(255,47,175,.50),
-0 0 35px rgba(255,47,175,.28);
-
-}
-
-/* =======================
-   BOTÃO AZUL
-======================= */
-
-.btn-azul{
-
-background:linear-gradient(
-135deg,
-#29D8FF,
-#159CC5
-);
-
-box-shadow:
-0 0 8px rgba(41,216,255,.35),
-0 0 20px rgba(41,216,255,.18);
-
-}
-
-.btn-azul:hover{
-
-transform:translateY(-4px);
-
-box-shadow:
-0 0 15px rgba(41,216,255,.50),
-0 0 35px rgba(41,216,255,.28);
-
-}
-
-/* Clique */
-
-.btn-rosa:active,
-.btn-azul:active{
-
-transform:scale(.97);
-
-}
-
-/* Reflexo */
-
-.btn-rosa::before,
-.btn-azul::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:-120%;
-
-width:45%;
-
-height:100%;
-
-background:rgba(255,255,255,.30);
-
-transform:skewX(-25deg);
-
-transition:.7s;
-
-}
-
-.btn-rosa:hover::before,
-.btn-azul:hover::before{
-
-left:160%;
-
-}
-
-/* =======================================================
-   GLOW DO TÍTULO
-======================================================= */
-
-.titulo-neon{
-
-text-shadow:
-
-0 0 6px rgba(255,255,255,.15),
-
-0 0 12px rgba(255,47,175,.20),
-
-0 0 12px rgba(41,216,255,.20);
-
+/* ==========================================================================
+   CONFIGURAÇÕES E VARIÁVEIS DO TEMA
+   ========================================================================== */
+:root {
+  --color-bg: #090606;
+  --color-text-main: #ffffff;
+  --color-text-muted: #a39590;
+  
+  /* Cores Neon Calibradas */
+  --neon-pink: #ff1493; /* Tom Rosa Pink/Shock Puro */
+  --neon-blue: #29d8ff;
+  
+  /* Efeito de Vidro Escuro */
+  --card-glass-bg: rgba(18, 13, 11, 0.78);
+  --card-glass-blur: 20px;
+  
+  --transition-premium: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PANO DE FUNDO: Degradê com luminosidade expandida (magenta, rosa e azul) */
+body {
+  background-color: var(--color-bg);
+  background-image: 
+    linear-gradient(135deg, rgba(45, 15, 35, 0.93) 0%, rgba(18, 10, 22, 0.96) 50%, rgba(10, 20, 35, 0.93) 100%),
+    radial-gradient(circle at 15% 25%, rgba(255, 47, 175, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 85% 75%, rgba(41, 216, 255, 0.08) 0%, transparent 55%);
+  background-attachment: fixed;
+  color: var(--color-text-main);
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
 }
-
-/* =======================================================
-   PARTE 4
-   EFEITOS NEON + RESPONSIVIDADE
-======================================================= */
 
-/* Fundo da seção */
-
-.destaques{
-
-    position:relative;
-
-    background:
-    radial-gradient(circle at top,#251A16 0%,#16110F 70%);
-    overflow:hidden;
-
+/* ==========================================================================
+   CABEÇALHO DA SEÇÃO (Igual à Imagem)
+   ========================================================================== */
+.highlights-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
 }
-
-/* Luz ambiente */
-
-.destaques::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-
-    height:500px;
-
-    background:rgba(255,47,175,.06);
-
-    filter:blur(140px);
 
-    top:-180px;
-
-    left:-180px;
-
+.section-header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+.header-icon-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+/* ⚡ ESTILIZAÇÃO DO ÍCONE ENVIADO EM SVG (Dimensionado acima da frase) */
+.neon-cake-image-icon {
+  width: 130px; 
+  height: 130px;
+  display: inline-block;
+}
+
+/* Linhas em azul neon do bolo da imagem */
+.neon-blue-glow path, .neon-blue-glow circle {
+  stroke: var(--neon-blue);
+  stroke-width: 2.2;
+  fill: none;
+  filter: drop-shadow(0 0 5px var(--neon-blue)) drop-shadow(0 0 12px rgba(41, 216, 255, 0.4));
 }
-
-.destaques::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:500px;
 
-    height:500px;
+/* Linhas em rosa neon do bolo da imagem */
+.neon-pink-glow path, .neon-pink-glow circle {
+  stroke: var(--neon-pink);
+  stroke-width: 2.2;
+  fill: none;
+  filter: drop-shadow(0 0 5px var(--neon-pink)) drop-shadow(0 0 12px rgba(255, 20, 147, 0.4));
+}
 
-    background:rgba(41,216,255,.05);
-
-    filter:blur(140px);
-
-    bottom:-180px;
-
-    right:-180px;
-
+/* Preenchimento do miolo rosa da cereja igual à imagem */
+.neon-pink-glow circle[fill="currentColor"] {
+  fill: var(--neon-pink);
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* FONTE DO TÍTULO: Peso 300 (Ultra Fina e Elegante) */
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 300; 
+  letter-spacing: 5px;
 }
-
-/* Glow contínuo das bordas */
-
-.card.rosa{
 
-animation:rosaGlow 4s infinite alternate;
-
+/* Palavra NOSSOS */
+.text-pink {
+  color: #ffffff;
+  text-shadow: none;
+  animation: none;
 }
-
-.card.azul{
-
-animation:azulGlow 4s infinite alternate;
 
+/* Tom de azul claro neon */
+.text-blue {
+  color: var(--neon-blue);
+  text-shadow: 0 0 8px rgba(41, 216, 255, 0.5);
 }
-
-@keyframes rosaGlow{
-
-0%{
-
-box-shadow:
 
-0 0 8px rgba(255,47,175,.25),
-
-0 0 20px rgba(255,47,175,.15);
-
+.neon-line {
+  height: 1px;
+  width: 120px;
 }
-
-100%{
-
-box-shadow:
-
-0 0 15px rgba(255,47,175,.45),
-
-0 0 40px rgba(255,47,175,.28);
 
+.line-left {
+  background: linear-gradient(to right, transparent, var(--neon-blue));
+  box-shadow: 0 0 6px var(--neon-blue);
 }
 
+.line-right {
+  background: linear-gradient(to left, transparent, var(--neon-blue));
+  box-shadow: 0 0 6px var(--neon-blue);
 }
 
-@keyframes azulGlow{
-
-0%{
-
-box-shadow:
-
-0 0 8px rgba(41,216,255,.25),
-
-0 0 20px rgba(41,216,255,.15);
-
+.section-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: var(--color-text-muted);
 }
-
-100%{
 
-box-shadow:
-
-0 0 15px rgba(41,216,255,.45),
-
-0 0 40px rgba(41,216,255,.28);
-
+/* ==========================================================================
+   GRID E CARDS (MOLDURAS NEON)
+   ========================================================================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  width: 100%;
 }
 
+.product-card {
+  background: var(--card-glass-bg);
+  backdrop-filter: blur(var(--card-glass-blur));
+  -webkit-backdrop-filter: blur(var(--card-glass-blur));
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  transition: border-color 0.4s var(--transition-premium), box-shadow 0.4s var(--transition-premium);
 }
-
-/* Título piscando igual letreiro */
-
-.titulo-neon{
-
-animation:flicker 6s infinite;
 
+/* Estado Inicial da Moldura Rosa */
+.border-pink {
+  border: 1px solid rgba(255, 20, 147, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05);
 }
 
-@keyframes flicker{
-
-0%,18%,22%,24%,62%,100%{
-
-opacity:1;
-
+/* Estado Inicial da Moldura Azul */
+.border-blue {
+  border: 1px solid rgba(41, 216, 255, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05);
 }
 
-20%{
-
-opacity:.35;
-
+/* MOLDURAS ACENDEM NO HOVER */
+.product-card.border-pink:hover {
+  border-color: var(--neon-pink);
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.7), 
+    0 0 15px rgba(255, 20, 147, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.product-card.border-blue:hover {
+  border-color: var(--neon-blue);
+  box-shadow: 
+    0 16px 40px rgba(0, 0, 0, 0.7), 
+    0 0 15px rgba(41, 216, 255, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1);
 }
-
-23%{
 
-opacity:.15;
-
+.card-image-wrapper {
+  width: 100%;
+  height: 210px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
 }
-
-63%{
-
-opacity:.55;
 
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--transition-premium);
 }
 
+.product-card:hover .card-img {
+  transform: scale(1.05);
 }
-
-/* Ícone */
-
-.icone{
-
-animation:floatIcon 4s ease-in-out infinite;
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-@keyframes floatIcon{
-
-0%{
-
-transform:translateY(0);
-
+.card-title {
+  color: var(--color-text-main);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
 }
 
-50%{
-
-transform:translateY(-10px);
-
+.card-description {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
-
-100%{
 
-transform:translateY(0);
-
+.card-price {
+  color: var(--color-text-main);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
 }
 
+.price-unit {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
 }
-
-/* Linha Neon */
-
-.linha{
 
-box-shadow:
-
-0 0 12px currentColor;
-
+/* ==========================================================================
+   BOTÕES CORPORATIVOS
+   ========================================================================== */
+.btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 0.95rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--color-text-main); 
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none; 
+  transition: background 0.4s var(--transition-premium), border-color 0.4s var(--transition-premium), box-shadow 0.4s var(--transition-premium), color 0.4s var(--transition-premium);
 }
-
-/* Responsividade */
 
-@media(max-width:900px){
-
-.cards{
-
-grid-template-columns:repeat(2,1fr);
-
+/* 🛒 ÍCONE DO CARRINHO: Vazado, traço LED fino e Neon Branco constante */
+.btn .btn-icon {
+  width: 24px;       
+  height: 24px;      
+  stroke: #ffffff;   
+  stroke-width: 1.2; 
+  fill: none;        
+  filter: 
+    drop-shadow(0 0 2px #ffffff) 
+    drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+  transition: filter 0.4s var(--transition-premium), stroke 0.4s var(--transition-premium);
+  animation: none;
 }
 
+/* Botão Rosa Base */
+.btn-pink {
+  border-color: rgba(255, 20, 147, 0.35);
 }
-
-@media(max-width:650px){
-
-.cards{
-
-grid-template-columns:1fr;
 
+/* HOVER ROSA */
+.btn-pink:hover{
+  background:rgba(255,47,175,.18);
+  border-color:var(--neon-pink);
+  box-shadow: inset 0 0 18px rgba(255,47,175,.35), 0 0 18px rgba(255,47,175,.45), 0 0 35px rgba(255,47,175,.22);
 }
 
-.titulo-neon{
-
-font-size:34px;
-
+.btn-pink:hover .btn-icon {
+  stroke: #ffffff; 
+  filter: 
+    drop-shadow(0 0 4px #ffffff) 
+    drop-shadow(0 0 10px #ffffff)
+    drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); 
 }
-
-.linha{
 
-display:none;
-
+/* Botão Azul Base */
+.btn-blue {
+  border-color: rgba(41, 216, 255, 0.35);
 }
-
-.container{
-
-width:94%;
 
+/* HOVER AZUL */
+.btn-blue:hover{
+  background:rgba(41,216,255,.18);
+  border-color:var(--neon-blue);
+  box-shadow: inset 0 0 18px rgba(41,216,255,.35), 0 0 18px rgba(41,216,255,.45), 0 0 35px rgba(41,216,255,.22);
 }
 
+.btn-blue:hover .btn-icon {
+  stroke: #ffffff; 
+  filter: 
+    drop-shadow(0 0 4px #ffffff) 
+    drop-shadow(0 0 10px #ffffff)
+    drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); 
 }
